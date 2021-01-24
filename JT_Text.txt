@@ -1,0 +1,2 @@
+Hallo,
+mein 1.Versuch mit git.
