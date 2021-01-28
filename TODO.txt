@@ -1,0 +1,20 @@
+# -- Zugriff auf die Werte mit dem Key - ok
+# -- Schlüssel-Wert-Paare hinzufügen 
+# -- Ein leeres Dictionary als Ausgangspunkt
+# -- Werte in einem Dictionary ändern - timestamp und Antwrot
+# -- Schlüssel-Wert-Paare enfernen, i.e. del alien_0['points'] - ok
+# -- Ein Dictionary aus ähnlichen Objekten
+# -- Mit get() auf Werte zugreifen - ok
+# -- Alle Schlüssel-Wert-Paare durchlaufen - besser gleiche Art von Information für verschiedene Schlüssel, i.e. items()
+# -- Alle Schlüssel in einem Dictionary durchlaufen, i.e. keys()
+# -- Die Schlüssel in einem Dictionary geordnet durchlaufen, i.e. sorted() - ok
+# -- Alle Werte in einem Dictionary durchlaufen, i.e. values()
+
+# -- Dictionaries in einer Liste
+# -- Liste in einem Dictionary
+# -- Dictionary in einem Dictionary
+
+# Nice to have
+# list
+# if some_list:
+# 
