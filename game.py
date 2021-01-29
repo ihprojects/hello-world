@@ -4,6 +4,7 @@ pygame.init()
 screen = pygame.display.set_mode((800,500))
 
 ##
+# TODO: create class for constant values
 
 clock =pygame.time.Clock()
 run = True
