@@ -1,5 +1,34 @@
 import pygame
 
+def draw_lines(display_surface, availabe_width, available_height):
+    margin = 2
+    
+    if availabe_width < (available_height - 50) :
+        max_field_length = available_width
+    else:
+        max_field_length = available_height - 50 # remove text height
+    
+    # leeve margin
+    max_field_length -= margin*2
+    from_x = margin
+    to_x = max_field_length - margin*2
+    from_y = 50 + margin
+    to_y = max_field_length - margin*2 + 50 # add text hight for correct y possition
+    
+    step = (max_field_length - margin*2) // 10
+    curr_x = from_x
+    curr_y = from_y
+    for i in range(1, 12): # need to draw 12 lines
+        pygame.draw.line(display_surface, gray, (from_x, curr_y), (to_x, curr_y), 2) # horizontal line - y is changing
+        print(f"horizontal ({from_x},{curr_y}), ({to_x},{curr_y})")
+        pygame.draw.line(display_surface, gray, (curr_x, from_y), (curr_x, to_y), 2) # vertical line - x is changing
+        print(f"vertical ({curr_x},{from_y}), ({curr_x},{to_y})")
+        curr_x += step
+        curr_y += step
+
+# '            for i in range(50, 450, 100):
+#                 pygame.draw.line(gameDisplay, gray, (i, 50), (i, 350), 2)
+#             pygame.draw.line(gameDisplay, gray, (50, i), (350, i), 2)'
 
 word_1 ={
     'english_word':'chair',          # Der zu übersetzende englische Begriff
@@ -52,6 +81,7 @@ textRect.center = (height // 2, 25)
 # at the center coordinate.
 display_surface.blit(text,textRect)
 
+draw_lines(display_surface, width, height)
 clock =pygame.time.Clock()
 run = True
 while run:
